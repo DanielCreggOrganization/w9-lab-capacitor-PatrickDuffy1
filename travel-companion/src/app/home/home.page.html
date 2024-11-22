@@ -7,8 +7,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <ion-button (click)="takePicture()">Take picture</ion-button>
+    <!-- <pwa-camera-modal></pwa-camera-modal> -->
+    <ion-button class="ion-margin" (click)="takePicture()">Take picture</ion-button>
     <ion-button (click)="getCurrentPosition()">Get Location</ion-button>
-  </div>
+    <ion-button (click)="getDeviceInfo()">Get Device Info</ion-button>
 </ion-content>
