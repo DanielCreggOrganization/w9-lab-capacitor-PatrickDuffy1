@@ -13,5 +13,12 @@ export class DeviceInfoService {
     const info = await Device.getInfo();
 
     console.log(info);
+
+    // Log available browser information:
+    console.log({
+      userAgent: navigator.userAgent,
+      platform: navigator.platform,
+      language: navigator.language
+    });
   }
 }

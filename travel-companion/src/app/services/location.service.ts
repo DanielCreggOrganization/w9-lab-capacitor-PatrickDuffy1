@@ -13,5 +13,10 @@ export class LocationService {
     const coordinates = await Geolocation.getCurrentPosition();
 
     console.log('Current position:', coordinates);
+
+    // Monitor actual position updates:
+    navigator.geolocation.watchPosition((position) => {
+      console.log('New position:', position);
+    });
   }
 }

@@ -21,10 +21,17 @@ export class CameraService {
       quality: 90
     });
 
+    // You can monitor the actual Web API call:
+    navigator.mediaDevices.addEventListener('devicechange', () => {
+      console.log('Camera devices changed');
+    });
+
     // Convert base64 string to data URL format for img src attribute
     // Returns undefined if no image was captured
     return image.base64String 
       ? `data:image/jpeg;base64,${image.base64String}` 
       : undefined;
   }
+
+  
 }
