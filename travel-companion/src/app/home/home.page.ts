@@ -5,7 +5,9 @@ import { LocationService } from '../services/location.service';
 import { DeviceInfoService } from '../services/device-info.service';
 import { NetworkInfoService } from '../services/network-info.service';
 import { TextToSpeechService } from '../services/text-to-speech.service';
-//import {defineCustomElements} from '@ionic/pwa-elements/loader'
+import {defineCustomElements} from '@ionic/pwa-elements/loader'
+
+defineCustomElements(window);
 
 @Component({
   selector: 'app-home',
@@ -21,7 +23,7 @@ export class HomePage {
   deviceInfoService : DeviceInfoService;
   networkInfoServive : NetworkInfoService;
   textToSpeechService : TextToSpeechService;
-  capturedImage: string | undefined;
+  capturedImage: string | undefined; 
 
   constructor(cameraService : CameraService,
      locationService : LocationService,
